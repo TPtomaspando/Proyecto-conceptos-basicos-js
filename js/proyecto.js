@@ -26,4 +26,16 @@ for (let i = 0; i < respuestas.length; i++) {
 
 let promedio = suma / respuestas.length;
 
-console.log("El promedio de satisfaccion es: " + promedio);
+document.write(`<br>El promedio de satisfaccion es:  ${promedio}</br>`);
+
+let satisfechos = respuestas.filter(
+  (calificaciones) => calificaciones >= 7
+).length;
+
+document.write(`Clientes satisfechos:  ${satisfechos}`);
+
+let insatisfechos = respuestas.filter(
+  (calificaciones) => calificaciones <= 4
+).length;
+
+document.write(`<br>Clientes insatisfechos:  ${insatisfechos}</br>`);
