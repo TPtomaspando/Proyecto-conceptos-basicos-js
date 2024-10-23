@@ -39,3 +39,15 @@ let insatisfechos = respuestas.filter(
 ).length;
 
 document.write(`<br>Clientes insatisfechos:  ${insatisfechos}</br>`);
+
+let porcentajeSatisfechos = (satisfechos / respuestas.length) * 100;
+let porcentajeInsatisfechos = (insatisfechos / respuestas.length) * 100;
+
+document.write(
+  `<br>Porcentaje de clientes satisfechos: 
+  ${porcentajeSatisfechos} %</br>`
+);
+document.write(
+  `<br>Porcentaje de clientes insatisfechos: 
+  ${porcentajeInsatisfechos} %</br>`
+);
