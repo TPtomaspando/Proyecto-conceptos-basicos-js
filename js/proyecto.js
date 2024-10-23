@@ -51,3 +51,23 @@ document.write(
   `<br>Porcentaje de clientes insatisfechos: 
   ${porcentajeInsatisfechos} %</br>`
 );
+
+let moda = respuestas[0];
+let maxRepeticiones = 0;
+
+for (let i = 0; i < respuestas.length; i++) {
+  let cuentaRepeticiones = 0;
+
+  for (let j = 0; j < respuestas.length; j++) {
+    if (respuestas[i] === respuestas[j]) {
+      cuentaRepeticiones++;
+    }
+  }
+
+  if (cuentaRepeticiones > maxRepeticiones) {
+    maxRepeticiones = cuentaRepeticiones;
+    moda = respuestas[i];
+  }
+}
+
+document.write("La calificación más repetida (moda):" + moda);
